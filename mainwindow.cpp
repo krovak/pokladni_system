@@ -9,8 +9,9 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->setupUi(this);
     QSqlDatabase eav= QSqlDatabase::addDatabase("QSQLITE");
 
-    eav.setDatabaseName("C:/Users/Jjunior_Portable/Documents/cpp_projekty/EAVtest/eavtest.sqlite");
+    eav.setDatabaseName("eavtest.sqlite");
     eav.open();
+
 
     model = new QSqlTableModel(this);
     ui->vypisL->setText("something");
